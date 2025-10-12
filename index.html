@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aswin C | Portfolio</title>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+    --primary: #0077cc;
+    --secondary: #005fa3;
+    --bg-dark: #1e1e1e;
+    --text-light: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    scroll-behavior: smooth;
+}
+
+/* Header with glass-style background image */
+header {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px 60px 20px;
+    color: var(--text-light);
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://media.licdn.com/dms/image/v2/D4E16AQGucz8CXfkIXg/profile-displaybackgroundimage-shrink_350_1400/B4EZk2rG9LIIAc-/0/1757558896097?e=1762992000&v=beta&t=po5sfZDP1ROdriIfJ673NymjOXOtGLs0aVwwj3EhQ7o') center/cover no-repeat;
+    opacity: 0.25; /* 25% visible for glass effect */
+    z-index: 0;
+}
+
+header img,
+header h1,
+header p {
+    position: relative;
+    z-index: 1; /* Ensure text & profile are above overlay */
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+header h1 {
+    margin: 10px 0 0 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-size: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--secondary);
+    position: relative;
+}
+
+nav a {
+    color: var(--text-light);
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #004080;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+.projects, .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5em;
+}
+
+.contact-icons a {
+    color: var(--primary);
+    transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+    color: var(--secondary);
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    header h1 { font-size: 2em; }
+    header p { font-size: 0.9em; }
+    nav { flex-direction: column; width: 100%; }
+    .card { width: 90%; }
+}
+
+@media (max-width: 480px) {
+    nav a { padding: 12px 0; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://media.licdn.com/dms/image/v2/D4E03AQGYAp3LuB6k0A/profile-displayphoto-crop_800_800/B4EZk2pYRkIwAI-/0/1757558441921?e=1762992000&v=beta&t=btVe1mUwjt7zXbC_9RrcCfQ3FRsk3SWQuJ66gNZllyc" alt="Profile Picture">
+    <h1>Aswin C</h1>
+    <p>Web Developer | MCA Student | Tech Enthusiast</p>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi! I’m Aswin C, currently a first-year MCA student at Nandha Engineering College and a BCA graduate from Nandha Arts and Science College. I’m passionate about software development, coding, and creating innovative solutions that blend functionality with design.
+
+I love exploring new technologies, tackling challenging projects, and building applications that make life easier and more enjoyable. From web development to databases and problem-solving, I thrive on learning by doing and turning ideas into reality.
+
+When I’m not coding, you’ll find me experimenting with design, exploring tech trends, or refining my portfolio projects. I combine creativity with logical thinking to craft projects that are not only efficient but also visually appealing. I’m excited to grow, collaborate, and make an impact in the world of technology.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>BINMESSAGE</h3>
+            <p>BINMESSAGE is a web-based tool that allows users to encode text messages into binary and send them via WhatsApp, as well as convert binary back into readable text. It’s built using HTML, CSS, and JavaScript and features a clean, interactive interface with glowing buttons and smooth transitions.</p>
+        </div>
+        <div class="card">
+            <h3>QR CODE GENERTAOR</h3>
+            <p>The project aims to generate QR codes based on user input, making it easy to share information in a scannable
+format. Users can enter text, URLs, or other data, and the program will generate a corresponding QR code image</p>
+        </div>
+        <div class="card">
+            <h3>BANKING SYSTEM</h3>
+            <p>The Banking System in C is a simple console-based project that simulates basic banking operations like account
+creation, deposit, withdrawal, and balance inquiry. The program stores user data in files or structures, ensuring
+persistence and easy access.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+         <div class="card">C & C++</div>
+        <div class="card">Java</div>
+        <div class="card">Python</div>
+        <div class="card">HTML & CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">SQL</div>
+        <div class="card">MongoDB</div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+        <a href="mailto:aswinc748@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/aswin-c-16858b268" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/aswin1912005" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Aswin C | Built with ❤️</p>
+</footer>
+
+</body>
+</html>
