@@ -41,7 +41,7 @@ header::before {
     width: 100%;
     height: 100%;
     background: url('https://media.licdn.com/dms/image/v2/D4E16AQGucz8CXfkIXg/profile-displaybackgroundimage-shrink_350_1400/B4EZk2rG9LIIAc-/0/1757558896097?e=1767225600&v=beta&t=7MjTvLpNszNF4yZm1ds2q8a5GSrdgbvK8O4tJJ4lKxw') center/cover no-repeat;
-    opacity: 0.25; /* 25% visible for glass effect */
+    opacity: 0.25;
     z-index: 0;
 }
 
@@ -49,7 +49,7 @@ header img,
 header h1,
 header p {
     position: relative;
-    z-index: 1; /* Ensure text & profile are above overlay */
+    z-index: 1;
 }
 
 header img {
@@ -113,6 +113,7 @@ h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: stretch;
 }
 
 .card {
@@ -121,12 +122,15 @@ h2 {
     padding: 20px;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
     transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,123,204,0.6);
 }
 
 .contact-icons {
@@ -167,7 +171,7 @@ footer {
 <body>
 
 <header>
-    <img src="https://media.licdn.com/dms/image/v2/D4E03AQGYAp3LuB6k0A/profile-displayphoto-crop_800_800/B4EZk2pYRkIwAI-/0/1757558441921?e=1767225600&v=beta&t=QvEZ7THMRftQ3H40PXYCZ-h_Se0wixIiF1_VA0vXwT4">
+    <img src="https://media.licdn.com/dms/image/v2/D4E03AQGYAp3LuB6k0A/profile-displayphoto-crop_800_800/B4EZk2pYRkIwAI-/0/1757558441921?e=1767225600&v=beta&t=QvEZ7THMRftQ3H40PXYCZ-h_Se0wixIiF1_VA0vXwT4" alt="Aswin C Profile Picture">
     <h1>Aswin C</h1>
     <p>Web Developer | MCA Student | Tech Enthusiast</p>
 </header>
@@ -181,7 +185,7 @@ footer {
 
 <section id="about">
     <h2>About Me</h2>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi! I’m Aswin C, currently a first-year MCA student at Nandha Engineering College and a BCA graduate from Nandha Arts and Science College. I’m passionate about software development, coding, and creating innovative solutions that blend functionality with design.
+    <p>Hi! I’m Aswin C, currently a first-year MCA student at Nandha Engineering College and a BCA graduate from Nandha Arts and Science College. I’m passionate about software development, coding, and creating innovative solutions that blend functionality with design.
 
 I love exploring new technologies, tackling challenging projects, and building applications that make life easier and more enjoyable. From web development to databases and problem-solving, I thrive on learning by doing and turning ideas into reality.
 
@@ -191,35 +195,47 @@ When I’m not coding, you’ll find me experimenting with design, exploring tec
 <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
-        <div class="card">
-            <h3>BINMESSAGE</h3>
-            <p>BINMESSAGE is a web-based tool that allows users to encode text messages into binary and send them via WhatsApp, as well as convert binary back into readable text. It’s built using HTML, CSS, and JavaScript and features a clean, interactive interface with glowing buttons and smooth transitions.</p>
-        </div>
-        <div class="card">
-            <h3>QR CODE GENERTAOR</h3>
-            <p>The project aims to generate QR codes based on user input, making it easy to share information in a scannable
-format. Users can enter text, URLs, or other data, and the program will generate a corresponding QR code image</p>
-        </div>
-        <div class="card">
-            <h3>BANKING SYSTEM</h3>
-            <p>The Banking System in C is a simple console-based project that simulates basic banking operations like account
+        <a href="https://aswin1912005.github.io/binmsg/" target="_blank" style="text-decoration: none; display: block;">
+            <div class="card">
+                <h3>BINMESSAGE</h3>
+                <p>BINMESSAGE is a web-based tool that allows users to encode text messages into binary and send them via WhatsApp, as well as convert binary back into readable text. It’s built using HTML, CSS, and JavaScript and features a clean, interactive interface with glowing buttons and smooth transitions.</p>
+            </div>
+        </a>
+        <a href="https://github.com/aswin1912005/QR-CODE-GENERATOR" target="_blank" style="text-decoration: none; display: block;">
+            <div class="card">
+                <h3>QR CODE GENERATOR</h3>
+                <p>The project aims to generate QR codes based on user input, making it easy to share information in a scannable format. Users can enter text, URLs, or other data, and the program will generate a corresponding QR code image.</p>
+            </div>
+        </a>
+       <a href="https://github.com/aswin1912005/Banking-System" target="_blank" style="text-decoration: none; display: block;">
+    <div class="card">
+        <h3>BANKING SYSTEM</h3>
+        <p>The Banking System in C is a simple console-based project that simulates basic banking operations like account
 creation, deposit, withdrawal, and balance inquiry. The program stores user data in files or structures, ensuring
 persistence and easy access.</p>
-        </div>
+    </div>
+</a>
+
+        <a href="https://aswin1912005.github.io/Agrobot/" target="_blank" style="text-decoration: none; display: block;">
+            <div class="card">
+                <h3>AGROBOT</h3>
+                <p>
+                    AgroChatbot is a web-based chatbot designed to provide instant agricultural information to farmers, students, and enthusiasts. It uses the Wikipedia API to fetch real-time data about crops, pests, farming techniques, and more.
+            </div>
+        </a>
     </div>
 </section>
 
 <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
-         <div class="card">C & C++</div>
+        <div class="card">C</div>
         <div class="card">Java</div>
         <div class="card">Python</div>
         <div class="card">HTML & CSS</div>
         <div class="card">JavaScript</div>
         <div class="card">SQL</div>
         <div class="card">MongoDB</div>
-        <div class="card">Visual Basic</div>
     </div>
 </section>
 
@@ -229,6 +245,7 @@ persistence and easy access.</p>
         <a href="mailto:aswinc748@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/aswin-c-16858b268" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/aswin1912005" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="tel:+916374388937"><i class="fas fa-phone"></i></a>
     </div>
 </section>
 
